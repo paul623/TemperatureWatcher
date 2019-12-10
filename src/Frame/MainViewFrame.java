@@ -8,12 +8,11 @@ import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
-import sun.applet.Main;
+
 
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
-import java.sql.Time;
+
 
 public class MainViewFrame extends JFrame {
     JFreeChart mChart;
