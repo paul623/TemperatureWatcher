@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TemperatureWatcher:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TemperatureWatcher_jar</output-path>
+    <root id="archive" name="TemperatureWatcher.jar">
+      <element id="module-output" name="TemperatureWatcher" />
+      <element id="library" level="project" name="jfreechart-1.0.19-demo" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/jcommon-1.0.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/jfreechart-1.0.19-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/gson-2.8.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/jfreechart-1.0.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/RXTXcomm.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -11,8 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataLogManager {
-    static final String data_local_address="data/datalog.txt";
-    private static List<DataSetBean> getData(){
+    static final String data_local_address=System.getProperty("user.dir")+"/data/datalog.txt";
+
+    public static List<DataSetBean> getData(){
         List<DataSetBean> dataSetBeans=new ArrayList<>();
         String local_str=FileManager.readFile(data_local_address);
         if(local_str==null){
@@ -31,6 +32,12 @@ public class DataLogManager {
      * @param dataSetBeans
      * */
     public static void saveData(List<DataSetBean> dataSetBeans){
+        List<DataSetBean> list=getData();
+        if(list.size()!=0){
+            for(DataSetBean setBean:list){
+                dataSetBeans.add(setBean);
+            }
+        }
         Gson gson=new Gson();
         String json=gson.toJson(dataSetBeans);
         FileManager.saveDataIntoFile(json,data_local_address);
@@ -45,6 +52,13 @@ public class DataLogManager {
             mDataSet.addValue(i.getValues(),i.getRowKey(),i.getColumnKey());
         }
         return mDataSet;
+    }
+    public static void saveIntoLocal(DataSetBean dataSetBean){
+        List<DataSetBean> dataSetBeans=getData();
+        dataSetBeans.add(dataSetBean);
+        Gson gson=new Gson();
+        String json=gson.toJson(dataSetBeans);
+        FileManager.saveDataIntoFile(json,data_local_address);
     }
     public static CategoryDataset GetDataset()
     {

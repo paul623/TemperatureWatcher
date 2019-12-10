@@ -67,6 +67,7 @@ public class SerialPortManager {
                 return serialPort;
             }
         } catch (NoSuchPortException e) {
+            ShowUtils.errorMessage("找不到该端口！");
             e.printStackTrace();
         }
         return null;
