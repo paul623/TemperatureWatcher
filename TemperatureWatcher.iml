@@ -11,5 +11,7 @@
     <orderEntry type="library" name="jcommon-1.0.23" level="project" />
     <orderEntry type="library" name="jfreechart-1.0.19" level="project" />
     <orderEntry type="library" name="jfreechart-1.0.19-swt" level="project" />
+    <orderEntry type="library" name="RXTXcomm" level="project" />
+    <orderEntry type="library" name="gson-2.8.5" level="project" />
   </component>
 </module>
